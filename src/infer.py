@@ -104,7 +104,8 @@ def infer():
         init_from_pretrained_model=args.model_path)
 
     # decoders only accept string encoded in utf-8
-    vocab_list = [chars.encode("utf-8") for chars in data_generator.vocab_list]
+    #vocab_list = [chars.encode("utf-8") for chars in data_generator.vocab_list]
+    vocab_list = data_generator.vocab_list
 
     if args.decoding_method == "ctc_greedy":
         ds2_model.logger.info("start inference ...")

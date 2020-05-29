@@ -17,6 +17,9 @@ def _levenshtein_distance(ref, hyp):
     extend the edits to word level when calculate levenshtein disctance for
     two sentences.
     """
+    ref = list(ref)
+    hyp = list(hyp)
+    
     m = len(ref)
     n = len(hyp)
 
@@ -75,8 +78,8 @@ def word_errors(reference, hypothesis, ignore_case=False, delimiter=' '):
         reference = reference.lower()
         hypothesis = hypothesis.lower()
 
-    ref_words = filter(None, reference.split(delimiter))
-    hyp_words = filter(None, hypothesis.split(delimiter))
+    ref_words = list(filter(None, reference.split(delimiter)))
+    hyp_words = list(filter(None, hypothesis.split(delimiter)))
 
     edit_distance = _levenshtein_distance(ref_words, hyp_words)
     return float(edit_distance), len(ref_words)
