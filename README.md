@@ -3,7 +3,7 @@ This version of [PaddlePaddle DeepSpeech](https://github.com/PaddlePaddle/DeepSp
 
 ### Docker usage
 ```
-docker build -f Dockerfile_cpu_py37 -t deepspeech-cpu 
+docker build -f Dockerfile_cpu_py37 -t deepspeech-cpu .
 docker run -v /your/data/and/model/dir/:/root/DeepSpeech/DATA/ -it deepspeech-cpu
 ```
 
