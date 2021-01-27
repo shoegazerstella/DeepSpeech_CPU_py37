@@ -1,4 +1,4 @@
-# DeepSpeech CPU py37
+# DeepSpeech CPU on python 3.7
 This version of [PaddlePaddle DeepSpeech](https://github.com/PaddlePaddle/DeepSpeech) is intended for inference only to run on CPU with python 3.7
 
 ### Docker usage
